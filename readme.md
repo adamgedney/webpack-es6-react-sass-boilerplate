@@ -1,8 +1,6 @@
 ### Setup gulp for scss compiling & webpack(es6 & React transpiling) watch
 #### React is using Radium for component style scoping & injection
-
-
-#### Webpack supports Common JS modules to allow ```module.exports``` and ```require``` in the browser
+Webpack supports Common JS modules to allow ```module.exports``` and ```require``` in the browser
 
 
 ```npm install -g webpack gulp```
