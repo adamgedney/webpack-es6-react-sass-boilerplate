@@ -1,0 +1,73 @@
+########################################################################
+# ****DO NOT STORE CREDENTIALS OR ENVIRONMENT RELATED INFO IN REPO**** #
+########################################################################
+
+wp-config.php
+
+# MOST TIMES YOU CAN ADD THIS IF YOU HAVN'T MADE ENVIRONMENT RELATED CHANGES BUT IF YOU DO THEN DO NOT COMMIT #
+
+.htaccess
+
+# DO NOT STORE UPLOAD ASSETS AND MEDIA
+wp-content/uploads/
+wp-content/upgrade
+wp-content/uploads
+
+# DO NOT STORE WORDPRESS DIRECTORY AS THIS IS A SYMLINK
+wordpress
+
+# DO NOT STORE CACHE, LOG, OR BACKUP FILES IN REPO #
+wp-content/cache/
+#*.cache
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/backups/
+wp-content/backup-db/
+/wp-content/plugins/wordfence/tmp
+*.log
+
+# w3 TC 
+wp-content/w3tc-config
+w3tc-wp-loader.php
+
+# SITEMAPS ARE NOT NEEDED #
+
+sitemap.xml
+sitemap.xml.gz
+
+
+# Remove Seaqrch replace script that was used heavly with previous setups (less needed now) #
+
+searchreplacedb2.php
+searchreplacedb.php
+olympSearchReplaceDB.php
+
+# Remove EDITOR Files #
+
+.idea/
+_notes
+
+.svn
+
+
+/wsdl-*
+
+# Remove SASS cache files #
+
+wp-content/themes/efeqdev/.sass-cache/*
+
+# MISC
+
+*.DS_Store
+
+wp-content/blogs.dir/
+
+_logs
+_tests
+error.log
+
+
+# ignore npm
+node_modules/
+node_modules
+

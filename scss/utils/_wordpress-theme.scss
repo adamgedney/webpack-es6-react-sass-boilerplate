@@ -1,0 +1,14 @@
+/*
+Theme Name: Toku
+
+Description: This is a child theme for twentysixteen
+Template: twentysixteen
+Text Domain: toku
+*/
+
+.olymp-stylesheet-test{
+  display: block;
+}
+
+/*Import Parent theme styles*/
+@import url("../twentysixteen/style.css");

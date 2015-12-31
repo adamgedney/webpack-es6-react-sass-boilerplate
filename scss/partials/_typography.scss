@@ -1,0 +1,20 @@
+html body{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  h1,h2,h3,h4,h5,h6,p,a{
+	color: $text-primary;
+  }
+}
+
+
+@font-face {
+  font-family: 'digital-7regular';
+  src: url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.eot');
+  src: url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.woff2') format('woff2'),
+  url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.woff') format('woff'),
+  url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.ttf') format('truetype'),
+  url('/wp-content/themes/toku/css/lib/fonts/digital7/digital-7-webfont.svg#digital-7regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

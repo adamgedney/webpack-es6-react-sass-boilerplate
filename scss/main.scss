@@ -1,0 +1,32 @@
+
+//@import "utils/wordpress-theme";
+@import "utils/reset";
+
+
+
+/* Vendor */
+//@import "vendor/font-awesome/font-awesome";
+@import "vendor/animate-css/animate";
+//@import "vendor/owl-carousel/owlcarousel";
+//@import "vendor/owl-carousel/owlthemedefault";
+//@import "vendor/bootstrap/bootstrap";
+
+/* Utils */
+@import "utils/color";
+@import "utils/gradients";
+@import "utils/media-queries";
+@import "utils/grid";
+@import "utils/util";
+@import "utils/base-rules";
+@import "utils/animations";
+@import "utils/clearfix";
+
+/* Partials */
+@import "partials/layout";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/placeholders";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/primary-menu";

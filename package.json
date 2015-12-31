@@ -1,0 +1,34 @@
+{
+  "name": "frontEndDevToolkit",
+  "version": "1.0.1",
+  "description": "",
+  "homepage": "",
+  "scripts": {
+    "watch": "webpack --watch"
+  },
+  "author": {
+    "name": "Adam Gedney",
+    "email": "adam.gedney@gmail.com"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.7",
+    "radium": "^0.15.3",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5"
+  }
+}
