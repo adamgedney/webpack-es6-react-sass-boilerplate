@@ -22,7 +22,6 @@ const SCSS_PATH = BASE_PATH + 'scss',
 //=================================//
 // CSS
 //=================================//
-
 // SASS -- Compile, autoprefix, build sourcemap, livereload (w/out refresh)
 gulp.task('sass-compile-prefix', function() {
 	return gulp.src(SCSS_PATH + '/main.scss')
@@ -31,15 +30,17 @@ gulp.task('sass-compile-prefix', function() {
 		.pipe(plugin.sass())
 		.pipe(plugin.autoprefixer(['last 2 versions', 'safari 5','ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']))
 		.pipe(plugin.sourcemaps.write('./'))// relative to gulp.dest below
-		.pipe(gulp.dest(CSS_PATH));
+		.pipe(gulp.dest(CSS_PATH))
+		.pipe(plugin.livereload());
 });
 
 //CSS -- minify
 gulp.task('css',['sass-compile-prefix'],function(){
 	return gulp.src(CSS_PATH + '/main.css')
-		.pipe(plugin.plumber({errorHandler:onError}))
-		.pipe(plugin.rename('style.css'))
-		.pipe(gulp.dest(BASE_PATH))
+		// No need to rename and copy - not minifying. Just initiate livereload
+	//	.pipe(plugin.plumber({errorHandler:onError}))
+	//	.pipe(plugin.rename('style.css'))
+	//	.pipe(gulp.dest(CSS_PATH))
 		.pipe(plugin.livereload());
 });
 
@@ -62,14 +63,13 @@ gulp.task('build', function(){
 //=================================//
 // Webpack - Babel & React
 //=================================//
-gulp.task("webpack", function(callback) {
+gulp.task("webpack", function() {
 	webpack(webpackConfig, function(err, stats) {
 		if(err) throw new gutil.PluginError("webpack", err);
-
-		gutil.log("[webpack]", stats.toString({
-			// output options
-		}));
-		callback();
+		// Spits too many messages to console. Annoying
+		//gutil.log("[webpack]", stats.toString({
+		//	// output options
+		//}));
 	});
 });
 

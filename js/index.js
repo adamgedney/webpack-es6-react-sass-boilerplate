@@ -62,96 +62,21 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var utils = __webpack_require__(194);
-	
-	/**
-	 * SomeModel Class
-	 */
-	
-	var SomeModel = (function () {
-		function SomeModel() {
-			_classCallCheck(this, SomeModel);
-		}
-	
-		_createClass(SomeModel, [{
-			key: 'getAll',
-			value: function getAll() {
-				return new Promise(function (resolve, reject) {
-					console.log('all');
-					resolve({ id: 'ejinvpidnadion869' });
-				});
-			}
-		}, {
-			key: 'getByID',
-			value: function getByID(args) {
-				return new Promise(function (resolve, reject) {
-					console.log(args.id, 'GET by ID');
-					args.name = 'getByID';
-	
-					resolve(args);
-				});
-			}
-		}, {
-			key: 'updateByID',
-			value: function updateByID(args) {
-				return new Promise(function (resolve, reject) {
-					console.log(args.id, 'UPDATE');
-	
-					resolve(args);
-				});
-			}
-		}]);
-	
-		return SomeModel;
-	})();
-	
-	var Model = new SomeModel();
-	
-	/**
-	 * Promises
-	 */
-	Model.getAll().then(function (data) {
-		return Model.getByID({ id: data.id });
-	}).then(function (data) {
-		console.log('DATA1', data);
-		return Model.updateByID({ id: data.id });
-	}).then(function (data) {
-		console.log('DATA2', data);
-	}, handleCatch);
-	
-	function handleCatch(err) {
-		console.log(err);
-	}
-	
-	/**
-	 * Interpolation
-	 * @type {{name: string}}
-	 */
-	var customer = { name: "Foo" };
-	var card = { amount: 7, product: "Bar", unitprice: 42 };
-	
-	var message = 'Hello ' + customer.name + ',\nwant to buy ' + card.amount + ' ' + card.product + ' for\na total of ' + card.amount * card.unitprice + ' bucks?';
-	
-	document.getElementById('text').innerText = message;
-	
-	utils.getAlert();
-	
-	//=====================//
-	// React component
-	//=====================//
-	
 	// Radium styles
 	var styles = {
 		base: {
-			color: 'salmon',
+			color: 'yellow',
 			fontWeight: 100,
 			fontSize: 21,
+			width: '50%',
+			margin: '0 25%',
+			textAlign: 'center',
 			background: 'purple',
 			':hover': {
 				background: 'green'
@@ -22488,21 +22413,6 @@
 	}
 	
 	module.exports = exports['default'];
-
-/***/ },
-/* 194 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	module.exports = {
-		getAlert: function getAlert() {
-			console.log('got alert');
-		},
-		testUtils: function testUtils() {
-			console.log('testUtils');
-		}
-	};
 
 /***/ }
 /******/ ]);

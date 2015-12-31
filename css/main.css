@@ -2394,22 +2394,21 @@ h1, h2, h3, h4, h5, h6, p, li, span {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.cf:before, #wrap.container div#navigation .menu-header:before,
-.cf:after,
-#wrap.container div#navigation .menu-header:after {
+.cf:before,
+.cf:after {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
 
-.cf:after, #wrap.container div#navigation .menu-header:after {
+.cf:after {
   clear: both; }
 
 /**
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-.cf, #wrap.container div#navigation .menu-header {
+.cf {
   *zoom: 1; }
 
 /* Partials */
@@ -2425,119 +2424,11 @@ html body {
   font-weight: normal;
   font-style: normal; }
 
-#wrap.container div#header {
-  width: 25%;
-  float: left;
-  padding-top: 7px;
-  margin-top: 0; }
-  @media (max-width: 1365px) {
-    #wrap.container div#header {
-      width: 15%; } }
-  @media (max-width: 767px) {
-    #wrap.container div#header {
-      width: 100%;
-      margin: 0;
-      margin-left: 0;
-      float: none; } }
-  @media (max-width: 767px) {
-    #wrap.container div#header .logotype-img {
-      text-align: center;
-      display: block;
-      margin: 0 auto; } }
-  #wrap.container div#header .logotype-img img {
-    max-height: 49px; }
-
-#wrap.container div#navigation {
-  float: right;
-  width: 70%;
-  clear: none;
-  height: 69px;
-  margin-bottom: 0; }
-  @media (max-width: 1365px) {
-    #wrap.container div#navigation {
-      width: 70%;
-      margin-right: 1%; } }
-  @media (max-width: 1023px) {
-    #wrap.container div#navigation {
-      width: 75%; } }
-  @media (max-width: 767px) {
-    #wrap.container div#navigation {
-      width: 100%;
-      height: auto;
-      margin-right: 0;
-      margin-bottom: 27px; } }
-  #wrap.container div#navigation ul li.active a {
-    background: none !important;
-    border: none !important; }
-    @media (max-width: 767px) {
-      #wrap.container div#navigation ul li.active a {
-        background: rgba(0, 0, 0, 0.01) !important;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; } }
-  #wrap.container div#navigation .menu-header ul {
-    overflow: hidden; }
-    @media (max-width: 991px) {
-      #wrap.container div#navigation .menu-header ul {
-        min-width: 0; } }
-    @media (max-width: 767px) {
-      #wrap.container div#navigation .menu-header ul {
-        float: none; } }
-    #wrap.container div#navigation .menu-header ul li {
-      float: right; }
-      @media (max-width: 767px) {
-        #wrap.container div#navigation .menu-header ul li:first-of-type {
-          padding-top: 18px;
-          width: 90%;
-          margin: 0 5% 27px !important; } }
-      @media (max-width: 767px) {
-        #wrap.container div#navigation .menu-header ul li:first-of-type a {
-          border-top: 1px solid rgba(0, 0, 0, 0.05); } }
-      @media (max-width: 767px) {
-        #wrap.container div#navigation .menu-header ul li {
-          text-align: center;
-          display: inline-block;
-          float: none;
-          width: 100%;
-          margin: auto !important; } }
-      #wrap.container div#navigation .menu-header ul li a {
-        line-height: 49px;
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-        color: #000;
-        text-shadow: none; }
-        @media (max-width: 767px) {
-          #wrap.container div#navigation .menu-header ul li a {
-            font-size: 14px;
-            line-height: 33px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05); } }
-        @media (max-width: 767px) {
-          #wrap.container div#navigation .menu-header ul li a:hover {
-            background: rgba(0, 0, 0, 0.05); } }
-
-@media (max-width: 767px) {
-  #wrap #content {
-    width: 95%;
-    margin: 0 2.5% !important; } }
-
-div.menu-header ul#menu-main-nav li#menu-item-113,
-div.menu-header ul#menu-main-nav li#menu-item-123 {
-  position: relative;
-  top: 21px; }
-  div.menu-header ul#menu-main-nav li#menu-item-113 a,
-  div.menu-header ul#menu-main-nav li#menu-item-123 a {
-    color: #ffffff !important;
-    font-weight: 100 !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    padding: 0 !important; }
-
-@media (max-width: 1023px) {
-  .container {
-    width: 100%; } }
-
 #footer {
   margin: 0;
   padding: 0; }
+  #footer p {
+    color: blue; }
 
 button.menu-toggle {
   display: none !important; }
