@@ -1,8 +1,8 @@
-##Using webpack to transpile with babel and support Common JS modules:
-### The modules below also support the gulpfile that will run everything. This compiles scss to css as well
-
 ### Setup gulp for scss compiling & webpack(es6 & React transpiling) watch
 #### React is using Radium for component style scoping & injection
+
+
+#### Webpack supports Common JS modules to allow ```module.exports``` and ```require``` in the browser
 
 
 ```npm install -g webpack gulp```
