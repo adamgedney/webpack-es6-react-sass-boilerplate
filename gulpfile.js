@@ -74,6 +74,18 @@ gulp.task("webpack", function() {
 });
 
 
+//====================//
+// Pure Babel - Be sure to update babel presets and gulp-babel
+//====================//
+gulp.task('src-babel', function () {
+	return gulp.src(SRC_PATH + '/**/*.js')
+		.pipe(plugin.sourcemaps.init())
+		.pipe(babel({presets:['es2015']}))
+		.pipe(plugin.sourcemaps.write('./'))
+		.pipe(gulp.dest(JS_PATH));
+});
+
+
 
 //=================================//
 // Watch  ( usage: $ gulp watch )
