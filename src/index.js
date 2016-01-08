@@ -20,7 +20,10 @@ var styles = {
 
 class Hello extends Radium(React.Component) {
 	render() {
-		return <h1 style={styles.base}>Hello</h1>
+		return
+		<div className="mytheme">
+			<h1 style={styles.base}>Hello</h1>
+		</div>
 	}
 };
 
