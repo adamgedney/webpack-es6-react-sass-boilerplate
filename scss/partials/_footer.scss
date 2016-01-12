@@ -1,6 +1,9 @@
 #footer{
   margin: 0;
   padding: 0;
+
+  @include bounce-to-left; 
+
   p{
     color: blue;
   }

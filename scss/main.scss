@@ -7,12 +7,13 @@
 /* Vendor */
 //@import "vendor/font-awesome/font-awesome";
 @import "vendor/animate-css/animate";
+@import "vendor/hover-css/hover";
 //@import "vendor/owl-carousel/owlcarousel";
 //@import "vendor/owl-carousel/owlthemedefault";
 //@import "vendor/bootstrap/bootstrap";
 
 /* Utils */
-@import "utils/color";
+@import "utils/color"; 
 @import "utils/gradients";
 @import "utils/media-queries";
 @import "utils/grid";
@@ -23,11 +24,11 @@
 
 /* Partials */
 @import "partials/layout";
-@import "partials/flexbox";
+// @import "partials/flexbox";
 @import "partials/typography";
 @import "partials/buttons";
 @import "partials/placeholders";
 
-@import "partials/header";
+@import "partials/header"; 
 @import "partials/footer";
 @import "partials/primary-menu";

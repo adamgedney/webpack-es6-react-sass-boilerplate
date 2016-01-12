@@ -65,36 +65,36 @@ a total of ${card.amount * card.unitprice} bucks?`;
 
 document.getElementById('text').innerText = message;
 
-
+ 
 utils.getAlert();
 
 
 //=====================//
 // React component
 //=====================//
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Radium from 'radium';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import Radium from 'radium';
 
-// Radium styles
-var styles = {
-	base: {
-		color: 'salmon',
-		fontWeight : 100,
-		fontSize: 21,
-		background: 'purple',
-		':hover': {
-			background: 'green'
-		}
-	}
-};
+// // Radium styles
+// var styles = {
+// 	base: {
+// 		color: 'salmon',
+// 		fontWeight : 100,
+// 		fontSize: 21,
+// 		background: 'purple',
+// 		':hover': {
+// 			background: 'green'
+// 		}
+// 	}
+// };
 
-class Hello extends Radium(React.Component) {
-	render() {
-		return <h1 style={styles.base}>Hello</h1>
-	}
-};
+// class Hello extends Radium(React.Component) {
+// 	render() {
+// 		return <h1 style={styles.base}>Hello</h1>
+// 	}
+// };
 
-ReactDOM.render(<Hello/>, document.getElementById('hello'));
+// ReactDOM.render(<Hello/>, document.getElementById('hello'));
 
 

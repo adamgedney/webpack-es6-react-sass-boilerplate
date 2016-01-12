@@ -80,7 +80,7 @@ gulp.task("webpack", function() {
 gulp.task('src-babel', function () {
 	return gulp.src(SRC_PATH + '/**/*.js')
 		.pipe(plugin.sourcemaps.init())
-		.pipe(babel({presets:['es2015']}))
+		.pipe(plugin.babel({presets:['es2015']}))
 		.pipe(plugin.sourcemaps.write('./'))
 		.pipe(gulp.dest(JS_PATH));
 });
@@ -95,7 +95,7 @@ gulp.task('watch', function() {
 
 	// Watch scss files
 	gulp.watch(SCSS_PATH + '/**/*.scss', ['css']);
-	gulp.watch(SRC_PATH + '/**/*.js', ['webpack']);
+	gulp.watch(SRC_PATH + '/**/*.js', ['src-babel']);
 });
 
 
