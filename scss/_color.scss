@@ -1,0 +1,85 @@
+//===========================//
+// Base Colors (For brand specific theming)
+//===========================//
+$red : red;
+$orange : #d78d45;
+$yellow : yellow;
+$green : green;
+$blue : #3d63ad;
+$purple : #3f3685;
+$brown : brown;
+$black : #000;
+$white : #fff;
+
+
+//===========================//
+// General
+//===========================//
+$go: $green;
+$warning: $yellow;
+$danger: $red;
+
+$icon : #4e5961;
+$icon-secondary : lighten($icon,10%);
+
+
+
+//===========================//
+// Backgrounds
+//===========================//
+$bg : #efefef;
+$bg-alt : #333;
+
+
+
+//===========================//
+// Links
+//===========================//
+$link: #4ab2cd;
+$link-visited: darken($link,10%);
+$link-hover: darken($link,20%);
+$link-active: darken($link,30%);
+
+
+
+//===========================//
+// Type
+//===========================//
+$text: #222;
+$text-primary: darken($text,10%);
+$text_secondary: darken($text,20%);
+$text-tertiary: darken($text,30%);
+
+$text-alt : #fff;
+$text-primary-alt: darken($text-alt,5%);
+$text-secondary-alt: darken($text-alt,10%);
+$text-tertiary-alt: darken($text-alt,15%);
+
+$h-text-primary: #333;
+$h-text-secondary: lighten($h-text-primary,10%);
+
+$text-standout : $red;
+
+
+
+//===========================//
+// Borders
+//===========================//
+$border: #aaa;
+$border-primary: darken($border,5%);
+$border-secondary: darken($border,10%);
+$border-tertiary: darken($border,15%);
+
+
+
+//===========================//
+// Buttons
+//===========================//
+$button: #e12826;
+
+
+
+
+
+
+

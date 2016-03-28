@@ -1,7 +1,7 @@
 {
-  "name": "generator-fedkit",
+  "name": "frontenddevkit",
   "version": "0.1.0",
-  "description": "A front end development toolkit generator for gulp/es6/react/sass",
+  "description": "A front end development boilerplate for gulp/es6/react/sass",
   "homepage": "",
   "scripts": {
     "watch": "webpack --watch"

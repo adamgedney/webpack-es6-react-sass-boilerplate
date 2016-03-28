@@ -1,0 +1,135 @@
+.dataTable{
+  ul{
+
+
+	li{
+	  @extend .cf;
+	  min-height: 35px;
+	  height: 35px;
+	  line-height: 22px;
+	  border-bottom: 1px solid $border-primary;
+	  clear: left;
+	  font-size: 12px;
+	  font-size: 1.2rem;
+
+	  @include break(sm){
+		height: auto;
+	  }
+
+	  &:hover{
+	  	background: rgba(0,0,0,0.01);
+	  }
+
+	  &:first-of-type{
+		@include break(sm){
+		  display: none;
+		}
+	  }
+
+	  //      &:hover:not(:first-of-type){
+	  //        background: rgba(0,0,0,0.05);
+	  //        cursor: pointer;
+	  //      }
+	}
+  }
+
+  &__col{
+	@include col(3);
+	display: block;
+	padding: 6px;
+	float: left;
+
+	@include break(sm){
+	  @include col(12);
+	  padding-left: 45px;
+	}
+
+	&:first-of-type{
+	  width: 45px;
+
+	  @include break(sm){
+		float: right;
+	  }
+	}
+
+	&-label{
+	  display: none;
+	  padding-right: 12px;
+
+	  @include break(sm){
+		display: inline;
+	  }
+	}
+  }
+
+  &__filters{
+
+  }
+
+  &__header{
+	background: $bg;
+	color: $text-tertiary-alt;
+	@extend .cf;
+
+	&:hover{
+	  background: $bg !important;// override li behavior
+	}
+  }
+
+  &__detail--icon{
+	position: relative;
+	height: 100%;
+	min-height: 35px;
+
+	&:after {
+	  content     : $fa-var-ellipsis-v;
+	  font-family: FontAwesome;
+	  position: absolute;
+	  color: #5c6379;
+	  font-size: 21px;
+	  left: 0px;
+	  text-align: center;
+	  line-height: 38px;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	&:hover{
+	  background: rgba(0,0,0,0.6);
+	  cursor: pointer;
+
+	  &:after{
+		color: $text-tertiary-alt;
+	  }
+	}
+  }
+
+  &--delete{
+	position: relative;
+	height: 100%;
+
+	&:after {
+	  content     : $fa-var-trash;
+	  font-family: FontAwesome;
+	  position: absolute;
+	  color: $danger;
+	  font-size: 14px;
+	  left: 0px;
+	  text-align: center;
+	  line-height: 38px;
+	  top: 0;
+	  width: 100%;
+	  height: 100%;
+	}
+
+	&:hover{
+	  background: rgba(0,0,0,0.6);
+	  cursor: pointer;
+
+	  &:after{
+		color: $text-tertiary-alt;
+	  }
+	}
+  }
+}
