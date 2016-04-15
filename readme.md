@@ -18,7 +18,7 @@ Webpack supports Common JS modules to allow ```module.exports``` and ```require`
 
 =======================
 ### Install all npm dependencies (If it hasn't been done i.e. if You have an empty package.json)
-`npm install webpack webpack-livereload-plugin webpack-node-externals babel-core babel-loader babel-preset-es2015 babel-preset-react core-js node-sass sass-loader css-loader radium extract-text-webpack-plugin --save-dev`
+`npm install webpack webpack-livereload-plugin webpack-node-externals babel-core babel-loader babel-preset-es2015 babel-preset-react core-js postcss-loader autoprefixer precss node-sass sass-loader css-loader radium extract-text-webpack-plugin --save-dev`
 `npm install react react-dom --save`
 
 #### Run the webpack watcher (from inside the repo folder "webpack-es6-react-sass-boilerplate" or if renamed "assets")

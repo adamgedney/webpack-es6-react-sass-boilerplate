@@ -18,6 +18,7 @@
     "email": "adam.gedney@gmail.com"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
@@ -26,6 +27,8 @@
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.4.2",
+    "postcss-loader": "^0.8.2",
+    "precss": "^1.4.0",
     "radium": "^0.15.3",
     "sass-loader": "^3.2.0",
     "webpack": "^1.12.15",

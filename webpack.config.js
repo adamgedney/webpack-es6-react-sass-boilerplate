@@ -2,6 +2,8 @@ var path = require('path'),
 webpack = require('webpack'),
 ExtractTextPlugin = require('extract-text-webpack-plugin'),
 nodeExternals = require('webpack-node-externals'),// For excluding node_modules from bundle
+precss       = require('precss'),
+autoprefixer = require('autoprefixer'),
 BASE_PATH = './',
 SCSS_PATH = BASE_PATH + 'scss',
 Styles_PATH = BASE_PATH + 'styles',
@@ -9,6 +11,10 @@ SCRIPTS_PATH = BASE_PATH + 'scripts',
 SRC_PATH = BASE_PATH + 'src';
 
 require('core-js');
+
+/**
+ * Might need this to import all css @imports  https://github.com/postcss/postcss-import
+ */
 
 
 
@@ -34,12 +40,6 @@ module.exports = {
 		filename: "index.js",
 		sourceMapFilename: "[file].map"
 	},
-	//devServer: {
-	//	contentBase: "./styles",
-	//	inline: true,
-	//	watch: true,
-	//	hot: true
-	//},
 	module: {
 		loaders: [
 			{
@@ -51,9 +51,15 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loader: ExtractTextPlugin.extract('css-loader?sourceMap!sass-loader?sourceMap=true&sourceMapContents=true')
+				loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader?pack=cleaner!sass-loader?sourceMap=true&sourceMapContents=true')
 			}
 		]
+	},
+	postcss: function () {
+		return {
+			defaults: [precss, autoprefixer],
+			cleaner:  [autoprefixer({browsers: ["last 2 versions"]})]
+		};
 	},
 	plugins: [new ExtractTextPlugin('./styles/style.css',{allChunks:true})]
 };
