@@ -4,8 +4,8 @@ ExtractTextPlugin = require('extract-text-webpack-plugin'),
 nodeExternals = require('webpack-node-externals'),// For excluding node_modules from bundle
 BASE_PATH = './',
 SCSS_PATH = BASE_PATH + 'scss',
-CSS_PATH = BASE_PATH + 'css',
-JS_PATH = BASE_PATH + 'js',
+Styles_PATH = BASE_PATH + 'styles',
+SCRIPTS_PATH = BASE_PATH + 'scripts',
 SRC_PATH = BASE_PATH + 'src';
 
 require('core-js');
@@ -28,13 +28,13 @@ module.exports = {
 	},
 	devtool: "source-map",
 	output: {
-		path: __dirname + '/js/',//Absolute path
-		publicPath: '/js/',//on client, served from  e.g. /js/index.js
+		path: __dirname + '/scripts/',//Absolute path
+		publicPath: '/scripts/',//on client, served from  e.g. /js/index.js
 		filename: "index.js",
 		sourceMapFilename: "[file].map"
 	},
 	devServer: {
-		contentBase: "./css",
+		contentBase: "./styles",
 		inline: true,
 		watch: true,
 		hot: true
