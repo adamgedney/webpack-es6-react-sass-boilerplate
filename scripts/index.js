@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/js/";
+/******/ 	__webpack_require__.p = "/scripts/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -44,30 +44,11 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
 	module.exports = __webpack_require__(2);
 
 
 /***/ },
-/* 1 */
-/***/ function(module, exports) {
-
-	//import React from 'react';
-	//import ReactDOM from 'react-dom';
-	//import Radium from 'radium' ;
-	
-	let test1 = () => {
-		console.log('test');
-		return new Promise();
-	};
-	
-	let test = "test string";
-	let text = document.getElementById('text');
-	text.innerHtml = "Hello";
-	console.log(text);
-	//tes.. szx
-
-/***/ },
+/* 1 */,
 /* 2 */
 /***/ function(module, exports) {
 

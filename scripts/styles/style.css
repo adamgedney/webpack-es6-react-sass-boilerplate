@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, cite, code, del, em, img, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ul {
+  list-style: none; }
+
+/*-----12 col grid------*/
+.col__one {
+  width: 8.33333333%; }
+
+.col__two {
+  width: 16.6666667%; }
+
+.col__three {
+  width: 25%; }
+
+.col__four {
+  width: 33.3333333%; }
+
+.col__five {
+  width: 41.6666666%; }
+
+.col__six {
+  width: 50%; }
+
+.col__seven {
+  width: 58.3333333%; }
+
+.col__eight {
+  width: 66.6666666%; }
+
+.col__nine {
+  width: 75%; }
+
+.col__ten {
+  width: 83.3333333%; }
+
+.col__eleven {
+  width: 91.6666666%; }
+
+.col__twelve {
+  width: 100%; }
+
+.col__one,
+.col__two,
+.col__three,
+.col__four,
+.col__five,
+.col__six,
+.col__seven,
+.col__eight,
+.col__nine,
+.col__ten,
+.col__eleven,
+.col__twelve {
+  float: left;
+  box-sizing: border-box;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-left: 0;
+  margin-right: 0; }
+  @media (max-width: 767px) {
+    .col__one,
+    .col__two,
+    .col__three,
+    .col__four,
+    .col__five,
+    .col__six,
+    .col__seven,
+    .col__eight,
+    .col__nine,
+    .col__ten,
+    .col__eleven,
+    .col__twelve {
+      width: 100%; } }
+
+html body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; }
+  html body h1, html body h2, html body h3, html body h4, html body h5, html body h6, html body p, html body a {
+    color: #090909; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.4rem; }
+
+/* =14px */
+h1 {
+  font-size: 2.4rem; }
+
+/* =24px */
+body {
+  overflow-x: hidden; }
+
+/* CLEARFIX */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
+/* ======================================= */
+/* Utility classes */
+/* ======================================= */
+.truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.small {
+  font-size: 9px; }
+
+.hover {
+  cursor: pointer;
+  opacity: 0.7; }
+
+.bold {
+  font-weight: 700; }
+
+.select-style {
+  border-radius: 3px;
+  overflow: hidden;
+  width: 100%;
+  position: relative; }
+  .select-style:after {
+    content: "\25BC";
+    position: absolute;
+    top: 10px;
+    right: 1px;
+    bottom: 1px;
+    font-size: 60%;
+    padding: 0 7px;
+    line-height: 33px;
+    background: rgba(0, 0, 0, 0.4);
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    border-radius: 0 3px 3px 0; }
+  .select-style:hover {
+    opacity: 0.7;
+    cursor: pointer; }
+
+body {
+  background: red;
+  height: 900px;
+  color: blue; }
+
+/*# sourceMappingURL=style.css.map*/

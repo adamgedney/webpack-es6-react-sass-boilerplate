@@ -24,7 +24,8 @@ module.exports = {
 		extensions: ["", ".js", ".scss"]
 	},
 	entry: {
-		app: [__dirname + "/src/index.js", __dirname + "/scss/main.scss"]
+		app: [__dirname + "/src/index.js"],
+		styles: [ __dirname + "/scss/main.scss"]
 	},
 	devtool: "source-map",
 	output: {
@@ -33,12 +34,12 @@ module.exports = {
 		filename: "index.js",
 		sourceMapFilename: "[file].map"
 	},
-	devServer: {
-		contentBase: "./styles",
-		inline: true,
-		watch: true,
-		hot: true
-	},
+	//devServer: {
+	//	contentBase: "./styles",
+	//	inline: true,
+	//	watch: true,
+	//	hot: true
+	//},
 	module: {
 		loaders: [
 			{
@@ -46,10 +47,6 @@ module.exports = {
 				exclude: /(node_modules)/,
 				include : [__dirname + '/src'],
 				loader: 'babel-loader',
-				//query: {
-				//	nonStandard: 'false',
-				//	presets: ['es2015']
-				//},
 				presets: ['es2015']
 			},
 			{
@@ -58,5 +55,5 @@ module.exports = {
 			}
 		]
 	},
-	plugins: [new ExtractTextPlugin('styles.css')]
+	plugins: [new ExtractTextPlugin('./styles/style.css',{allChunks:true})]
 };
