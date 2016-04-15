@@ -1,22 +1,25 @@
 var path = require('path'),
-webpack = require('webpack'),
-ExtractTextPlugin = require('extract-text-webpack-plugin'),
-nodeExternals = require('webpack-node-externals'),// For excluding node_modules from bundle
-precss       = require('precss'),
-autoprefixer = require('autoprefixer'),
-BASE_PATH = './',
-SCSS_PATH = BASE_PATH + 'scss',
-Styles_PATH = BASE_PATH + 'styles',
-SCRIPTS_PATH = BASE_PATH + 'scripts',
-SRC_PATH = BASE_PATH + 'src';
+	webpack = require('webpack'),
+	ExtractTextPlugin = require('extract-text-webpack-plugin'),
+	nodeExternals = require('webpack-node-externals'),// For excluding node_modules from bundle
+	precss       = require('precss'),
+	autoprefixer = require('autoprefixer'),
+	BASE_PATH = './',
+	SCSS_PATH = BASE_PATH + 'scss',
+	Styles_PATH = BASE_PATH + 'styles',
+	SCRIPTS_PATH = BASE_PATH + 'scripts',
+	SRC_PATH = BASE_PATH + 'src',
+
+	/**
+	 * Non WordPress clients: '../styles/style.css'
+	 * WordPress clients: '../../style.css'
+	 *
+	 * Used by the ExtractTextPlugin in "plugins" for determining output location and name of the compiled css file
+	 */
+	WORDPRESS_CLIENT = '../../style.css',
+	NON_WORDPRESS_CLIENT = '../styles/style.css';
 
 require('core-js');
-
-/**
- * Might need this to import all css @imports  https://github.com/postcss/postcss-import
- */
-
-
 
 module.exports = {
 	//target: 'node',
@@ -66,10 +69,6 @@ module.exports = {
 		};
 	},
 	plugins: [
-	/**
-	 * Non WordPress clients: '../styles/style.css'
-	 * WordPress clients: '../../style.css'
-	 */
-		new ExtractTextPlugin('../../style.css')
+		new ExtractTextPlugin(WORDPRESS_CLIENT)
 	]
 };
