@@ -1,45 +1,78 @@
-'use strict';
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId])
+/******/ 			return installedModules[moduleId].exports;
+/******/
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			exports: {},
+/******/ 			id: moduleId,
+/******/ 			loaded: false
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/js/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
 
-var _react = require('react');
+	__webpack_require__(1);
+	module.exports = __webpack_require__(2);
 
-var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+	//import React from 'react';
+	//import ReactDOM from 'react-dom';
+	//import Radium from 'radium' ;
+	
+	let test1 = () => {
+		console.log('test');
+		return new Promise();
+	};
+	
+	let test = "test string";
+	let text = document.getElementById('text');
+	text.innerHtml = "Hello";
+	console.log(text);
+	//tes.. szx
 
-var _radium = require('radium');
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
 
-var _radium2 = _interopRequireDefault(_radium);
+	// removed by extract-text-webpack-plugin
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var test = "test string";
-
-// // Radium styles
-// var styles = {
-// 	base: {
-// 		color: 'yellow',
-// 		fontWeight : 100,
-// 		fontSize: 21,
-// 		width: '50%',
-// 		margin: '0 25%',
-// 		textAlign :'center',
-// 		background: 'purple',
-// 		':hover': {
-// 			background: 'green'
-// 		}
-// 	}
-// };
-
-// class Hello extends Radium(React.Component) {
-// 	render() {
-// 		return
-// 		<div className="mytheme">
-// 			<h1 style={styles.base}>Hello</h1>
-// 		</div>
-// 	}
-// };
-
-// ReactDOM.render(<Hello/>, document.getElementById('hello'));
+/***/ }
+/******/ ]);
 //# sourceMappingURL=index.js.map
