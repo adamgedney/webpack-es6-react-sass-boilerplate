@@ -2,6 +2,8 @@
 //import ReactDOM from 'react-dom';
 //import Radium from 'radium' ;
 
+const utils = require('./example.js');
+
 let test1 = ()=>{
 	console.log('test');
 	return new Promise();

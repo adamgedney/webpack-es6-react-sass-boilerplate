@@ -1,13 +1,4 @@
 @import "./color";
-@import "./utils/imports";
 @import "./libs/imports";
+@import "./utils/imports";
 @import "./components/imports";
-body{
-  background: red;
-  height: 900px;
-  color: blue;
-  transition: all .2s;
-  user-select: none;
-  display: flex;
-}
-//sds

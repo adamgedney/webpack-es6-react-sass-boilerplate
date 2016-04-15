@@ -30,8 +30,8 @@ module.exports = {
 		extensions: ["", ".js", ".scss"]
 	},
 	entry: {
-		app: [__dirname + "/src/index.js"],
-		styles: [ __dirname + "/scss/main.scss"]
+		styles: [ __dirname + "/scss/main.scss"],
+		app: [__dirname + "/src/index.js"]
 	},
 	devtool: "source-map",
 	output: {
@@ -61,5 +61,5 @@ module.exports = {
 			cleaner:  [autoprefixer({browsers: ["last 2 versions"]})]
 		};
 	},
-	plugins: [new ExtractTextPlugin('./styles/style.css',{allChunks:true})]
+	plugins: [new ExtractTextPlugin('../styles/style.css',{allChunks:true})]
 };
