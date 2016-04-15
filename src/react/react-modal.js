@@ -1,4 +1,5 @@
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 //<head>
 
 // _reactModal.scss
@@ -26,7 +27,7 @@
 var Modal = React.createClass({
 	getInitialState: function(){
 		return {
-			name:'',
+			name:'test 1',
 			sub:'',
 			phone:'',
 			web:''
@@ -48,10 +49,11 @@ var Modal = React.createClass({
 		var $close = document.querySelectorAll(".react-modal--close")[0];
 		//var $outer = document.querySelectorAll(".react-modal__outer")[0];
 		$close.onclick = this.handleClose;
-		//$outer.onclick = this.handleClose;
+		//$outer.onclick = this.handleClose ;
 	},
 	handleTrigger : function(e){
 		e.preventDefault();
+		console.log('got click');
 		var json = this.parseJSONAttrib({
 			dataJSON : e.currentTarget.getAttribute("data-json")
 		});
@@ -102,4 +104,8 @@ var Modal = React.createClass({
 	}
 });
 
-ReactDOM.render(<Modal/>, document.getElementById('react-modal'));
+window.onload = function(){
+	ReactDOM.render(<Modal/>, document.getElementById('react-modal'));
+};
+
+

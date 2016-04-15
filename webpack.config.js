@@ -19,35 +19,40 @@ require('core-js');
 
 
 module.exports = {
-	target: 'node',
+	//target: 'node',
 	externals: [nodeExternals({
-		//whitelist: ['jquery'] //- Which node_modules modules to allow in the bundling
+		whitelist: ['react','react-dom'] //- Which node_modules modules to allow in the bundling
 	})],
 	context: path.join(__dirname,'./'),
 	resolve: {
 		// When requiring in a file, search node_modules,src, and scss
 		modulesDirectories: ["node_modules", "src", "scss"],
-		extensions: ["", ".js", ".scss"]
+		extensions: ["", ".js", ".jsx", ".scss"]
 	},
 	entry: {
-		app: [__dirname + "/scss/main.scss",__dirname + "/src/index.js"]
+		index: [
+			__dirname + "/scss/main.scss",
+			__dirname + "/src/index.js"
+		]
 	},
 	devtool: "source-map",
 	output: {
 		path: __dirname + '/scripts/',//Absolute path
-		publicPath: '/scripts/',//on client, served from  e.g. /js/index.js
-		filename: "index.js",
+		publicPath: '/scripts/',//on client, served from  e.g. /scripts/index.js
+		filename: "[name].js",
 		sourceMapFilename: "[file].map"
 	},
 	module: {
 		loaders: [
+			/** ES6 transpiling w/ React **/
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
 				include : [__dirname + '/src'],
-				loader: 'babel-loader',
-				presets: ['es2015']
+				loaders: ['babel-loader?presets[]=es2015,presets[]=react']
 			},
+
+			/** SCSS compiling 7 css autoprefixing **/
 			{
 				test: /\.scss$/,
 				loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader?pack=cleaner!sass-loader?sourceMap=true&sourceMapContents=true')
@@ -60,5 +65,11 @@ module.exports = {
 			cleaner:  [autoprefixer({browsers: ["last 2 versions"]})]
 		};
 	},
-	plugins: [new ExtractTextPlugin('../styles/style.css')]
+	plugins: [
+	/**
+	 * Non WordPress clients: '../styles/style.css'
+	 * WordPress clients: '../../style.css'
+	 */
+		new ExtractTextPlugin('../../style.css')
+	]
 };

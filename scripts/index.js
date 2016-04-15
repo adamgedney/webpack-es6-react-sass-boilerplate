@@ -59,129 +59,57 @@
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
-	//import React from 'react';
-	//import ReactDOM from 'react-dom';
-	//import Radium from 'radium' ;
+	'use strict';
 	
-	const utils = __webpack_require__(4);
+	var _utils = __webpack_require__(4);
 	
-	let test1 = () => {
-		console.log('test');
-		return new Promise();
-	};
+	var _utils2 = _interopRequireDefault(_utils);
 	
-	let test = "test string";
-	let text = document.getElementById('text');
-	text.innerHtml = "Hello";
-	console.log(text);
-	//tes.. szx
+	var _pageAbout = __webpack_require__(5);
+	
+	var _pageAbout2 = _interopRequireDefault(_pageAbout);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	/**
+	 * This file is teh main entry point for all clientside javascript.
+	 *
+	 * If you need page/widget. or component specific scripts, create a new file (see the example page-about.js file)
+	 * in the src directory and import it below. THis file will serve as a map for what modules have been imported
+	 * into the project.
+	 */
+	
+	
+	console.log(_utils2.default.getTest());
+	console.log(_pageAbout2.default.getTest());
 
 /***/ },
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	var utils = __webpack_require__(5);
+	'use strict';
 	
-	/**
-	 * SomeModel Class
-	 */
-	class SomeModel {
-		getAll() {
-			return new Promise(function (resolve, reject) {
-				console.log('all');
-				resolve({ id: 'ejinvpidnadion869' });
-			});
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		getTest: function getTest() {
+			return 'utils.getTest';
 		}
-	
-		getByID(args) {
-			return new Promise(function (resolve, reject) {
-				console.log(args.id, 'GET by ID');
-				args.name = 'getByID';
-	
-				resolve(args);
-			});
-		}
-	
-		updateByID(args) {
-			return new Promise(function (resolve, reject) {
-				console.log(args.id, 'UPDATE');
-	
-				resolve(args);
-			});
-		}
-	}
-	
-	let Model = new SomeModel();
-	
-	/**
-	 * Promises
-	 */
-	Model.getAll().then(data => {
-		return Model.getByID({ id: data.id });
-	}).then(data => {
-		console.log('DATA1', data);
-		return Model.updateByID({ id: data.id });
-	}).then(data => {
-		console.log('DATA2', data);
-	}, handleCatch);
-	
-	function handleCatch(err) {
-		console.log(err);
-	}
-	
-	/**
-	 * Interpolation
-	 * @type {{name: string}}
-	 */
-	var customer = { name: "Foo" };
-	var card = { amount: 7, product: "Bar", unitprice: 42 };
-	
-	let message = `Hello ${ customer.name },
-	want to buy ${ card.amount } ${ card.product } for
-	a total of ${ card.amount * card.unitprice } bucks?`;
-	
-	document.getElementById('text').innerText = message;
-	
-	utils.getAlert();
-	
-	//=====================//
-	// React component
-	//=====================//
-	// import React from 'react';
-	// import ReactDOM from 'react-dom';
-	// import Radium from 'radium';
-
-	// // Radium styles
-	// var styles = {
-	// 	base: {
-	// 		color: 'salmon',
-	// 		fontWeight : 100,
-	// 		fontSize: 21,
-	// 		background: 'purple',
-	// 		':hover': {
-	// 			background: 'green'
-	// 		}
-	// 	}
-	// };
-
-	// class Hello extends Radium(React.Component) {
-	// 	render() {
-	// 		return <h1 style={styles.base}>Hello</h1>
-	// 	}
-	// };
-
-	// ReactDOM.render(<Hello/>, document.getElementById('hello'));
+	};
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = {
-		getAlert: function () {
-			console.log('got alert');
-		},
-		testUtils: function () {
-			console.log('testUtils');
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	exports.default = {
+		getTest: function getTest() {
+			return 'page-about.getTest';
 		}
 	};
 

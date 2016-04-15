@@ -1,5 +1,5 @@
 export default {
 	getTest : function(){
-		return 'utils.getTest';
+		return 'page-about.getTest';
 	}
 };
